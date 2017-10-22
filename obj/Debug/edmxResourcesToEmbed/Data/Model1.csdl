@@ -1,0 +1,1097 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PEPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Dijelovi">
+    <Key>
+      <PropertyRef Name="DijeloviID" />
+    </Key>
+    <Property Name="DijeloviID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Zalihe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Cijena" Type="Double" />
+    <NavigationProperty Name="NarudzbaStavke" Relationship="Self.FK__NarudzbaS__Dijel__027D5126" FromRole="Dijelovi" ToRole="NarudzbaStavke" />
+    <NavigationProperty Name="UgradjeniDijelovi" Relationship="Self.FK__Ugradjeni__Dijel__267ABA7A" FromRole="Dijelovi" ToRole="UgradjeniDijelovi" />
+  </EntityType>
+  <EntityType Name="IzvrseneUsluge">
+    <Key>
+      <PropertyRef Name="IzvrseneUslugeID" />
+    </Key>
+    <Property Name="IzvrseneUslugeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServisID" Type="Int32" />
+    <Property Name="UslugaID" Type="Int32" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK__IzvrseneU__Servi__2FEF161B" FromRole="IzvrseneUsluge" ToRole="Korisnici" />
+    <NavigationProperty Name="Usluge" Relationship="Self.FK__IzvrseneU__Uslug__30E33A54" FromRole="IzvrseneUsluge" ToRole="Usluge" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="ServisID" />
+    </Key>
+    <Property Name="ServisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImeKorisnika" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Adresa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="LozinkaHash" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LozinkaSalt" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SalonID" Type="Int32" />
+    <NavigationProperty Name="IzvrseneUsluge" Relationship="Self.FK__IzvrseneU__Servi__2FEF161B" FromRole="Korisnici" ToRole="IzvrseneUsluge" />
+    <NavigationProperty Name="SalonServis" Relationship="Self.FK__Korisnici__Salon__3572E547" FromRole="Korisnici" ToRole="SalonServis" />
+    <NavigationProperty Name="Racun" Relationship="Self.FK__Racun__ServisID__049AA3C2" FromRole="Korisnici" ToRole="Racun" />
+    <NavigationProperty Name="UgradjeniDijelovi" Relationship="Self.FK__Ugradjeni__Servi__30C33EC3" FromRole="Korisnici" ToRole="UgradjeniDijelovi" />
+    <NavigationProperty Name="Vozilo" Relationship="Self.FK__Vozilo__ServisID__190BB0C3" FromRole="Korisnici" ToRole="Vozilo" />
+  </EntityType>
+  <EntityType Name="Kupci">
+    <Key>
+      <PropertyRef Name="KupacID" />
+    </Key>
+    <Property Name="KupacID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DatumRegistracije" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LozinkaHash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LozinkaSalt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Narudzba" Relationship="Self.FK__Narudzba__KupacI__1BE81D6E" FromRole="Kupci" ToRole="Narudzba" />
+    <NavigationProperty Name="Ocjene" Relationship="Self.FK__Ocjene__KupacID__0B7CAB7B" FromRole="Kupci" ToRole="Ocjene" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProizvodjacID" Type="Int32" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="VrstaModela" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Kolicina" Type="Int32" />
+    <NavigationProperty Name="Proizvodjac" Relationship="Self.FK__Model__Proizvodj__1446FBA6" FromRole="Model" ToRole="Proizvodjac" />
+    <NavigationProperty Name="Vozilo" Relationship="Self.FK__Vozilo__ModelID__20ACD28B" FromRole="Model" ToRole="Vozilo" />
+  </EntityType>
+  <EntityType Name="NacinPlacanja">
+    <Key>
+      <PropertyRef Name="PlacanjeID" />
+    </Key>
+    <Property Name="PlacanjeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Racun" Relationship="Self.FK__Racun__PlacanjeI__15C52FC4" FromRole="NacinPlacanja" ToRole="Racun" />
+  </EntityType>
+  <EntityType Name="Narudzba">
+    <Key>
+      <PropertyRef Name="NarudzbaID" />
+    </Key>
+    <Property Name="NarudzbaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KupacID" Type="Int32" />
+    <Property Name="BrojNarudzbe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Datum" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="Otkazano" Type="Boolean" />
+    <NavigationProperty Name="Kupci" Relationship="Self.FK__Narudzba__KupacI__1BE81D6E" FromRole="Narudzba" ToRole="Kupci" />
+    <NavigationProperty Name="NarudzbaStavke" Relationship="Self.FK__NarudzbaS__Narud__1995C0A8" FromRole="Narudzba" ToRole="NarudzbaStavke" />
+  </EntityType>
+  <EntityType Name="NarudzbaStavke">
+    <Key>
+      <PropertyRef Name="NarudzbaStavkaID" />
+    </Key>
+    <Property Name="NarudzbaStavkaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NarudzbaID" Type="Int32" />
+    <Property Name="VoziloID" Type="Int32" />
+    <Property Name="Kolicina" Type="Int32" />
+    <Property Name="DijeloviID" Type="Int32" />
+    <NavigationProperty Name="Dijelovi" Relationship="Self.FK__NarudzbaS__Dijel__027D5126" FromRole="NarudzbaStavke" ToRole="Dijelovi" />
+    <NavigationProperty Name="Narudzba" Relationship="Self.FK__NarudzbaS__Narud__1995C0A8" FromRole="NarudzbaStavke" ToRole="Narudzba" />
+    <NavigationProperty Name="Vozilo" Relationship="Self.FK__NarudzbaS__Vozil__1A89E4E1" FromRole="NarudzbaStavke" ToRole="Vozilo" />
+  </EntityType>
+  <EntityType Name="Ocjene">
+    <Key>
+      <PropertyRef Name="OcjenaId" />
+    </Key>
+    <Property Name="OcjenaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KupacID" Type="Int32" />
+    <Property Name="VoziloID" Type="Int32" />
+    <Property Name="Ocjena" Type="Int32" />
+    <Property Name="Datum" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Kupci" Relationship="Self.FK__Ocjene__KupacID__0B7CAB7B" FromRole="Ocjene" ToRole="Kupci" />
+    <NavigationProperty Name="Vozilo" Relationship="Self.FK__Ocjene__VoziloID__0C70CFB4" FromRole="Ocjene" ToRole="Vozilo" />
+  </EntityType>
+  <EntityType Name="Proizvodjac">
+    <Key>
+      <PropertyRef Name="ProizvodjacID" />
+    </Key>
+    <Property Name="ProizvodjacID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivProizvodjaca" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Adresa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Model" Relationship="Self.FK__Model__Proizvodj__1446FBA6" FromRole="Proizvodjac" ToRole="Model" />
+  </EntityType>
+  <EntityType Name="Racun">
+    <Key>
+      <PropertyRef Name="RacunID" />
+    </Key>
+    <Property Name="RacunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServisID" Type="Int32" />
+    <Property Name="Opis" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Cijena" Type="Double" />
+    <Property Name="Komentar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PDV" Type="Double" />
+    <Property Name="Ukupno" Type="Double" />
+    <Property Name="DatumFakture" Type="DateTime" Precision="3" />
+    <Property Name="DatumIsporuke" Type="DateTime" Precision="3" />
+    <Property Name="NacinIsporuke" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PlacanjeID" Type="Int32" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK__Racun__ServisID__049AA3C2" FromRole="Racun" ToRole="Korisnici" />
+    <NavigationProperty Name="NacinPlacanja" Relationship="Self.FK__Racun__PlacanjeI__15C52FC4" FromRole="Racun" ToRole="NacinPlacanja" />
+  </EntityType>
+  <EntityType Name="SalonServis">
+    <Key>
+      <PropertyRef Name="SalonID" />
+    </Key>
+    <Property Name="SalonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adresa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sjedište" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK__Korisnici__Salon__3572E547" FromRole="SalonServis" ToRole="Korisnici" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UgradjeniDijelovi">
+    <Key>
+      <PropertyRef Name="UgradjeniID" />
+    </Key>
+    <Property Name="UgradjeniID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServisID" Type="Int32" />
+    <Property Name="DijeloviID" Type="Int32" />
+    <Property Name="Kolicina" Type="Int32" />
+    <NavigationProperty Name="Dijelovi" Relationship="Self.FK__Ugradjeni__Dijel__267ABA7A" FromRole="UgradjeniDijelovi" ToRole="Dijelovi" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK__Ugradjeni__Servi__30C33EC3" FromRole="UgradjeniDijelovi" ToRole="Korisnici" />
+  </EntityType>
+  <EntityType Name="Usluge">
+    <Key>
+      <PropertyRef Name="UslugaID" />
+    </Key>
+    <Property Name="UslugaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Cijena" Type="Double" />
+    <Property Name="Komentar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="IzvrseneUsluge" Relationship="Self.FK__IzvrseneU__Uslug__30E33A54" FromRole="Usluge" ToRole="IzvrseneUsluge" />
+  </EntityType>
+  <EntityType Name="Vozilo">
+    <Key>
+      <PropertyRef Name="VoziloID" />
+    </Key>
+    <Property Name="VoziloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServisID" Type="Int32" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Godiste" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Boja" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="VrstaMotora" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmisijaCO2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModelID" Type="Int32" />
+    <Property Name="SlikaThumg" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Slika" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Cijena" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK__Vozilo__ServisID__190BB0C3" FromRole="Vozilo" ToRole="Korisnici" />
+    <NavigationProperty Name="Model" Relationship="Self.FK__Vozilo__ModelID__20ACD28B" FromRole="Vozilo" ToRole="Model" />
+    <NavigationProperty Name="NarudzbaStavke" Relationship="Self.FK__NarudzbaS__Vozil__1A89E4E1" FromRole="Vozilo" ToRole="NarudzbaStavke" />
+    <NavigationProperty Name="Ocjene" Relationship="Self.FK__Ocjene__VoziloID__0C70CFB4" FromRole="Vozilo" ToRole="Ocjene" />
+  </EntityType>
+  <Association Name="FK__NarudzbaS__Dijel__027D5126">
+    <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijelovi">
+        <PropertyRef Name="DijeloviID" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="DijeloviID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ugradjeni__Dijel__267ABA7A">
+    <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1" />
+    <End Role="UgradjeniDijelovi" Type="Self.UgradjeniDijelovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijelovi">
+        <PropertyRef Name="DijeloviID" />
+      </Principal>
+      <Dependent Role="UgradjeniDijelovi">
+        <PropertyRef Name="DijeloviID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IzvrseneU__Servi__2FEF161B">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="0..1" />
+    <End Role="IzvrseneUsluge" Type="Self.IzvrseneUsluge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="IzvrseneUsluge">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IzvrseneU__Uslug__30E33A54">
+    <End Role="Usluge" Type="Self.Usluge" Multiplicity="0..1" />
+    <End Role="IzvrseneUsluge" Type="Self.IzvrseneUsluge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usluge">
+        <PropertyRef Name="UslugaID" />
+      </Principal>
+      <Dependent Role="IzvrseneUsluge">
+        <PropertyRef Name="UslugaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Korisnici__Salon__3572E547">
+    <End Role="SalonServis" Type="Self.SalonServis" Multiplicity="0..1" />
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalonServis">
+        <PropertyRef Name="SalonID" />
+      </Principal>
+      <Dependent Role="Korisnici">
+        <PropertyRef Name="SalonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Racun__ServisID__049AA3C2">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="0..1" />
+    <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="Racun">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ugradjeni__Servi__30C33EC3">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="0..1" />
+    <End Role="UgradjeniDijelovi" Type="Self.UgradjeniDijelovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="UgradjeniDijelovi">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vozilo__ServisID__190BB0C3">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="0..1" />
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="Vozilo">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Narudzba__KupacI__1BE81D6E">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="0..1" />
+    <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Narudzba">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ocjene__KupacID__0B7CAB7B">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="0..1" />
+    <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__Proizvodj__1446FBA6">
+    <End Role="Proizvodjac" Type="Self.Proizvodjac" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodjac">
+        <PropertyRef Name="ProizvodjacID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="ProizvodjacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vozilo__ModelID__20ACD28B">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelID" />
+      </Principal>
+      <Dependent Role="Vozilo">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Racun__PlacanjeI__15C52FC4">
+    <End Role="NacinPlacanja" Type="Self.NacinPlacanja" Multiplicity="0..1" />
+    <End Role="Racun" Type="Self.Racun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NacinPlacanja">
+        <PropertyRef Name="PlacanjeID" />
+      </Principal>
+      <Dependent Role="Racun">
+        <PropertyRef Name="PlacanjeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NarudzbaS__Narud__1995C0A8">
+    <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="0..1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Narudzba">
+        <PropertyRef Name="NarudzbaID" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="NarudzbaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NarudzbaS__Vozil__1A89E4E1">
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="0..1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozilo">
+        <PropertyRef Name="VoziloID" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="VoziloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ocjene__VoziloID__0C70CFB4">
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="0..1" />
+    <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozilo">
+        <PropertyRef Name="VoziloID" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="VoziloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PEPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Dijelovi" EntityType="Self.Dijelovi" />
+    <EntitySet Name="IzvrseneUsluge" EntityType="Self.IzvrseneUsluge" />
+    <EntitySet Name="Korisnici" EntityType="Self.Korisnici" />
+    <EntitySet Name="Kupci" EntityType="Self.Kupci" />
+    <EntitySet Name="Model" EntityType="Self.Model" />
+    <EntitySet Name="NacinPlacanja" EntityType="Self.NacinPlacanja" />
+    <EntitySet Name="Narudzba" EntityType="Self.Narudzba" />
+    <EntitySet Name="NarudzbaStavke" EntityType="Self.NarudzbaStavke" />
+    <EntitySet Name="Ocjene" EntityType="Self.Ocjene" />
+    <EntitySet Name="Proizvodjac" EntityType="Self.Proizvodjac" />
+    <EntitySet Name="Racun" EntityType="Self.Racun" />
+    <EntitySet Name="SalonServis" EntityType="Self.SalonServis" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UgradjeniDijelovi" EntityType="Self.UgradjeniDijelovi" />
+    <EntitySet Name="Usluge" EntityType="Self.Usluge" />
+    <EntitySet Name="Vozilo" EntityType="Self.Vozilo" />
+    <AssociationSet Name="FK__NarudzbaS__Dijel__027D5126" Association="Self.FK__NarudzbaS__Dijel__027D5126">
+      <End Role="Dijelovi" EntitySet="Dijelovi" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ugradjeni__Dijel__267ABA7A" Association="Self.FK__Ugradjeni__Dijel__267ABA7A">
+      <End Role="Dijelovi" EntitySet="Dijelovi" />
+      <End Role="UgradjeniDijelovi" EntitySet="UgradjeniDijelovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IzvrseneU__Servi__2FEF161B" Association="Self.FK__IzvrseneU__Servi__2FEF161B">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="IzvrseneUsluge" EntitySet="IzvrseneUsluge" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IzvrseneU__Uslug__30E33A54" Association="Self.FK__IzvrseneU__Uslug__30E33A54">
+      <End Role="Usluge" EntitySet="Usluge" />
+      <End Role="IzvrseneUsluge" EntitySet="IzvrseneUsluge" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Korisnici__Salon__3572E547" Association="Self.FK__Korisnici__Salon__3572E547">
+      <End Role="SalonServis" EntitySet="SalonServis" />
+      <End Role="Korisnici" EntitySet="Korisnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Racun__ServisID__049AA3C2" Association="Self.FK__Racun__ServisID__049AA3C2">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Racun" EntitySet="Racun" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ugradjeni__Servi__30C33EC3" Association="Self.FK__Ugradjeni__Servi__30C33EC3">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="UgradjeniDijelovi" EntitySet="UgradjeniDijelovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vozilo__ServisID__190BB0C3" Association="Self.FK__Vozilo__ServisID__190BB0C3">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Vozilo" EntitySet="Vozilo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Narudzba__KupacI__1BE81D6E" Association="Self.FK__Narudzba__KupacI__1BE81D6E">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Narudzba" EntitySet="Narudzba" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ocjene__KupacID__0B7CAB7B" Association="Self.FK__Ocjene__KupacID__0B7CAB7B">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__Proizvodj__1446FBA6" Association="Self.FK__Model__Proizvodj__1446FBA6">
+      <End Role="Proizvodjac" EntitySet="Proizvodjac" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vozilo__ModelID__20ACD28B" Association="Self.FK__Vozilo__ModelID__20ACD28B">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="Vozilo" EntitySet="Vozilo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Racun__PlacanjeI__15C52FC4" Association="Self.FK__Racun__PlacanjeI__15C52FC4">
+      <End Role="NacinPlacanja" EntitySet="NacinPlacanja" />
+      <End Role="Racun" EntitySet="Racun" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NarudzbaS__Narud__1995C0A8" Association="Self.FK__NarudzbaS__Narud__1995C0A8">
+      <End Role="Narudzba" EntitySet="Narudzba" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NarudzbaS__Vozil__1A89E4E1" Association="Self.FK__NarudzbaS__Vozil__1A89E4E1">
+      <End Role="Vozilo" EntitySet="Vozilo" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ocjene__VoziloID__0C70CFB4" Association="Self.FK__Ocjene__VoziloID__0C70CFB4">
+      <End Role="Vozilo" EntitySet="Vozilo" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <FunctionImport Name="ALLCars" EntitySet="Vozilo" ReturnType="Collection(PEPModel.Vozilo)">
+      <Parameter Name="ime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="BrisanjeAuta">
+      <Parameter Name="autoId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="BrisiNarudzbe">
+      <Parameter Name="NarudzbaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="BrisiNarudzbeStavke">
+      <Parameter Name="NarudzbastavkeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteKupac">
+      <Parameter Name="KupacId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DijeloviDelete">
+      <Parameter Name="dijeloviID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DijeloviSearch" EntitySet="Dijelovi" ReturnType="Collection(PEPModel.Dijelovi)">
+      <Parameter Name="naziv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GETDIJELOVE" ReturnType="Collection(PEPModel.GETDIJELOVE_Result)">
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Offset" Mode="In" Type="Int32" />
+      <Parameter Name="MaxRows" Mode="In" Type="Int32" />
+      <Parameter Name="TotalRows" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GETDijeloviID" EntitySet="Dijelovi" ReturnType="Collection(PEPModel.Dijelovi)">
+      <Parameter Name="dioID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GEtALLAuta" EntitySet="Vozilo" ReturnType="Collection(PEPModel.Vozilo)" />
+    <FunctionImport Name="GEtNarudzbaID" EntitySet="Narudzba" ReturnType="Collection(PEPModel.Narudzba)">
+      <Parameter Name="Idnarudzba" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GEtNazivDijelovaALl" EntitySet="Dijelovi" ReturnType="Collection(PEPModel.Dijelovi)">
+      <Parameter Name="naziv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllStavke" EntitySet="NarudzbaStavke" ReturnType="Collection(PEPModel.NarudzbaStavke)" />
+    <FunctionImport Name="GetKupacIME" EntitySet="Kupci" ReturnType="Collection(PEPModel.Kupci)">
+      <Parameter Name="ime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetVoziloID" EntitySet="Vozilo" ReturnType="Collection(PEPModel.Vozilo)">
+      <Parameter Name="VoziloID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertDijelove">
+      <Parameter Name="naziv" Mode="In" Type="String" />
+      <Parameter Name="model" Mode="In" Type="String" />
+      <Parameter Name="zalihe" Mode="In" Type="String" />
+      <Parameter Name="cijena" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="InsertModel">
+      <Parameter Name="proizovjdac" Mode="In" Type="Int32" />
+      <Parameter Name="naziv" Mode="In" Type="String" />
+      <Parameter Name="tip" Mode="In" Type="String" />
+      <Parameter Name="kolicina" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertProizvodjac">
+      <Parameter Name="naziv" Mode="In" Type="String" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertRacun">
+      <Parameter Name="servisid" Mode="In" Type="Int32" />
+      <Parameter Name="Opis" Mode="In" Type="String" />
+      <Parameter Name="cijena" Mode="In" Type="Double" />
+      <Parameter Name="komenatar" Mode="In" Type="String" />
+      <Parameter Name="Pdv" Mode="In" Type="Double" />
+      <Parameter Name="ukupno" Mode="In" Type="Double" />
+      <Parameter Name="nacinisporuke" Mode="In" Type="String" />
+      <Parameter Name="datumFa" Mode="In" Type="DateTime" />
+      <Parameter Name="datumI" Mode="In" Type="DateTime" />
+      <Parameter Name="Placanje" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertUgradjeniDijelovi">
+      <Parameter Name="servisID" Mode="In" Type="Int32" />
+      <Parameter Name="DijeloviID" Mode="In" Type="Int32" />
+      <Parameter Name="Kolicina" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Ocjena_insert">
+      <Parameter Name="KupacID" Mode="In" Type="Int32" />
+      <Parameter Name="VoziloID" Mode="In" Type="Int32" />
+      <Parameter Name="Ocjena" Mode="In" Type="Int32" />
+      <Parameter Name="Datum" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="PretragaAuta" EntitySet="Vozilo" ReturnType="Collection(PEPModel.Vozilo)">
+      <Parameter Name="naziv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PretragaNarudzbi" EntitySet="Narudzba" ReturnType="Collection(PEPModel.Narudzba)">
+      <Parameter Name="BRNarudzba" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PretragaNarudzbi11" ReturnType="Collection(PEPModel.PretragaNarudzbi11_Result)">
+      <Parameter Name="BRNarudzba" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PretragaNarudzbiStavki" EntitySet="NarudzbaStavke" ReturnType="Collection(PEPModel.NarudzbaStavke)" />
+    <FunctionImport Name="RAcunaiiiiia" ReturnType="Collection(PEPModel.RAcunaiiiiia_Result)" />
+    <FunctionImport Name="RacunSelectByDatum" EntitySet="Racun" ReturnType="Collection(PEPModel.Racun)">
+      <Parameter Name="datumP" Mode="In" Type="DateTime" />
+      <Parameter Name="datumI" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SearchKupac" EntitySet="Kupci" ReturnType="Collection(PEPModel.Kupci)">
+      <Parameter Name="Ime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SearchVozila" ReturnType="Collection(PEPModel.SearchVozila_Result)">
+      <Parameter Name="vozilo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectALLModele" ReturnType="Collection(PEPModel.SelectALLModele_Result)" />
+    <FunctionImport Name="SelectIDAuto" ReturnType="Collection(PEPModel.SelectIDAuto_Result)">
+      <Parameter Name="ModelID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectServis" EntitySet="Korisnici" ReturnType="Collection(PEPModel.Korisnici)" />
+    <FunctionImport Name="Servis_IzmjenaPassworda">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Servis_Update">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UgradjeniDijeloviDelete">
+      <Parameter Name="ugradjeni" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UgradjeniDijeloviPretraga" EntitySet="UgradjeniDijelovi" ReturnType="Collection(PEPModel.UgradjeniDijelovi)" />
+    <FunctionImport Name="VOZILA_MODEL" ReturnType="Collection(PEPModel.VOZILA_MODEL_Result)">
+      <Parameter Name="ModelID" Mode="In" Type="Int32" />
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Offset" Mode="In" Type="Int32" />
+      <Parameter Name="MaxRows" Mode="In" Type="Int32" />
+      <Parameter Name="TotalRows" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_ServisSelectID" EntitySet="Korisnici" ReturnType="Collection(PEPModel.Korisnici)">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_select_by_Name" EntitySet="Korisnici" ReturnType="Collection(PEPModel.Korisnici)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_update_status">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="getAllServis" EntitySet="Korisnici" ReturnType="Collection(PEPModel.Korisnici)" />
+    <FunctionImport Name="getAllUsluge" EntitySet="Usluge" ReturnType="Collection(PEPModel.Usluge)" />
+    <FunctionImport Name="getIDKupac" EntitySet="Kupci" ReturnType="Collection(PEPModel.Kupci)">
+      <Parameter Name="kupacID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getNArudzbaHistori" EntitySet="Narudzba" ReturnType="Collection(PEPModel.Narudzba)" />
+    <FunctionImport Name="getNArudzbaIDHistoriy" EntitySet="Narudzba" ReturnType="Collection(PEPModel.Narudzba)">
+      <Parameter Name="narudzbaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getRAcuniallFilter" ReturnType="Collection(PEPModel.getRAcuniallFilter_Result)" />
+    <FunctionImport Name="getaLLNarudzbe" EntitySet="Narudzba" ReturnType="Collection(PEPModel.Narudzba)" />
+    <FunctionImport Name="insertIzvrseneUsluge">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+      <Parameter Name="UslugaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertKupac">
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="Datum" Mode="In" Type="DateTime" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="LozinkaH" Mode="In" Type="String" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertServis" ReturnType="Collection(Decimal)">
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="ImeKorisnika" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertUsluge">
+      <Parameter Name="Naziv" Mode="In" Type="String" />
+      <Parameter Name="Cijena" Mode="In" Type="Double" />
+      <Parameter Name="Komentar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertVozilo">
+      <Parameter Name="ServisID" Mode="In" Type="Int32" />
+      <Parameter Name="ModelID" Mode="In" Type="Int32" />
+      <Parameter Name="NAZIV" Mode="In" Type="String" />
+      <Parameter Name="Boja" Mode="In" Type="String" />
+      <Parameter Name="Godiste" Mode="In" Type="String" />
+      <Parameter Name="VrstaMotora" Mode="In" Type="String" />
+      <Parameter Name="Emisija" Mode="In" Type="String" />
+      <Parameter Name="Slika" Mode="In" Type="Binary" />
+      <Parameter Name="SlikaThumb" Mode="In" Type="Binary" />
+      <Parameter Name="Cijena" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="pretragAuta" ReturnType="Collection(PEPModel.pretragAuta_Result)">
+      <Parameter Name="auta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pretragaDijelova" ReturnType="Collection(PEPModel.pretragaDijelova_Result)">
+      <Parameter Name="dio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="selectAllVozila" ReturnType="Collection(PEPModel.selectAllVozila_Result)" />
+    <FunctionImport Name="selectIme" EntitySet="Kupci" ReturnType="Collection(PEPModel.Kupci)">
+      <Parameter Name="ImeKorisnika" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="selectKorisnickoIme" EntitySet="Korisnici" ReturnType="Collection(PEPModel.Korisnici)">
+      <Parameter Name="ImeKorisnika" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="selectKupacKorisinickoIme" EntitySet="Kupci" ReturnType="Collection(PEPModel.Kupci)">
+      <Parameter Name="ime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="updateNarudzba">
+      <Parameter Name="narudzbaID" Mode="In" Type="Int32" />
+      <Parameter Name="izmjena" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="updateNarudzbaStatus">
+      <Parameter Name="narudzbaID" Mode="In" Type="Int32" />
+      <Parameter Name="izmjena" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="vijezba" ReturnType="Collection(PEPModel.vijezba_Result)" />
+  </EntityContainer>
+  <ComplexType Name="ALLCars_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="DijeloviSearch_Result">
+    <Property Type="Int32" Name="DijeloviID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Zalihe" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GETDijeloviID_Result">
+    <Property Type="Int32" Name="DijeloviID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Zalihe" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GEtALLAuta_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GEtNarudzbaID_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GEtNazivDijelovaALl_Result">
+    <Property Type="Int32" Name="DijeloviID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="String" Name="Zalihe" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GetAllStavke_Result">
+    <Property Type="Int32" Name="NarudzbaStavkaID" Nullable="false" />
+    <Property Type="Int32" Name="NarudzbaID" Nullable="true" />
+    <Property Type="Int32" Name="VoziloID" Nullable="true" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+    <Property Type="Int32" Name="DijeloviID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetKupacIME_Result">
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetVoziloID_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="PretragaAuta_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="PretragaNarudzbi1_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PretragaNarudzbi11_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PretragaNarudzbiStavki_Result">
+    <Property Type="Int32" Name="NarudzbaStavkaID" Nullable="false" />
+    <Property Type="Int32" Name="NarudzbaID" Nullable="true" />
+    <Property Type="Int32" Name="VoziloID" Nullable="true" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+    <Property Type="Int32" Name="DijeloviID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="RAcunaiiiiia_Result">
+    <Property Type="Int32" Name="RacunID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Opis" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="String" Name="Komentar" Nullable="true" MaxLength="100" />
+    <Property Type="Double" Name="PDV" Nullable="true" />
+    <Property Type="Double" Name="Ukupno" Nullable="true" />
+    <Property Type="DateTime" Name="DatumFakture" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DatumIsporuke" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NacinIsporuke" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="PlacanjeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="RacunSelectByDatum_Result">
+    <Property Type="Int32" Name="RacunID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Opis" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="String" Name="Komentar" Nullable="true" MaxLength="100" />
+    <Property Type="Double" Name="PDV" Nullable="true" />
+    <Property Type="Double" Name="Ukupno" Nullable="true" />
+    <Property Type="DateTime" Name="DatumFakture" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DatumIsporuke" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NacinIsporuke" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="PlacanjeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SearchKupac_Result">
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SearchVozila_Result">
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="SelectALLModele_Result">
+    <Property Type="Int32" Name="ModelID" Nullable="false" />
+    <Property Type="Int32" Name="ProizvodjacID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaModela" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectIDAuto_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectServis_Result">
+    <Property Type="Int32" Name="ServisID" Nullable="false" />
+    <Property Type="String" Name="ImeKorisnika" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Adresa" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="SalonID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="UgradjeniDijeloviPretraga_Result">
+    <Property Type="Int32" Name="UgradjeniID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="Int32" Name="DijeloviID" Nullable="true" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="esp_ServisSelectID_Result">
+    <Property Type="Int32" Name="ServisID" Nullable="false" />
+    <Property Type="String" Name="ImeKorisnika" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Adresa" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="SalonID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="esp_select_by_Name_Result">
+    <Property Type="Int32" Name="ServisID" Nullable="false" />
+    <Property Type="String" Name="ImeKorisnika" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Adresa" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="SalonID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getAllServis_Result">
+    <Property Type="Int32" Name="ServisID" Nullable="false" />
+    <Property Type="String" Name="ImeKorisnika" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Adresa" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="SalonID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getAllUsluge_Result">
+    <Property Type="Int32" Name="UslugaID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="String" Name="Komentar" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="getIDKupac_Result">
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getNArudzbaHistori_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getNArudzbaIDHistoriy_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getRAcuniallFilter_Result">
+    <Property Type="Int32" Name="RacunID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Opis" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="String" Name="Komentar" Nullable="true" MaxLength="100" />
+    <Property Type="Double" Name="PDV" Nullable="true" />
+    <Property Type="Double" Name="Ukupno" Nullable="true" />
+    <Property Type="DateTime" Name="DatumFakture" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DatumIsporuke" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NacinIsporuke" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="PlacanjeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getaLLNarudzbe_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="Int32" Name="KupacID" Nullable="true" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Datum" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pretragAuta_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="Int32" Name="ServisID" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ModelID" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="Binary" Name="Slika" Nullable="true" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="pretragaDijelova_Result">
+    <Property Type="Int32" Name="DijeloviID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Zalihe" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectAllVozila_Result">
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="Cijena" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="EmisijaCO2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+    <Property Type="Binary" Name="SlikaThumg" Nullable="true" />
+    <Property Type="String" Name="VrstaMotora" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="selectIme_Result">
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="selectKorisnickoIme_Result">
+    <Property Type="Int32" Name="ServisID" Nullable="false" />
+    <Property Type="String" Name="ImeKorisnika" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Adresa" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="SalonID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectKupacKorisinickoIme_Result">
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LozinkaHash" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="vijezba_Result">
+    <Property Type="DateTime" Name="DatumRegistracije" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VOZILA_MODEL_Result">
+    <Property Type="Int32" Name="VoziloID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Boja" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Godiste" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GETDIJELOVE_Result">
+    <Property Type="Int32" Name="DijeloviID" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Zalihe" Nullable="true" MaxLength="30" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServisModelStoreContainer" CdmEntityContainer="ServisEntities">
+    <EntitySetMapping Name="Dijelovi">
+      <EntityTypeMapping TypeName="ServisModel.Dijelovi">
+        <MappingFragment StoreEntitySet="Dijelovi">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvrseneUsluge">
+      <EntityTypeMapping TypeName="ServisModel.IzvrseneUsluge">
+        <MappingFragment StoreEntitySet="IzvrseneUsluge">
+          <ScalarProperty Name="IzvrseneUslugeID" ColumnName="IzvrseneUslugeID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="UslugaID" ColumnName="UslugaID" />
+          <ScalarProperty Name="BrojUsluga" ColumnName="BrojUsluga" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Model">
+      <EntityTypeMapping TypeName="ServisModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="VrstaModela" ColumnName="VrstaModela" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proizvodjac">
+      <EntityTypeMapping TypeName="ServisModel.Proizvodjac">
+        <MappingFragment StoreEntitySet="Proizvodjac">
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="NazivProizvodjaca" ColumnName="NazivProizvodjaca" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RadniNalog">
+      <EntityTypeMapping TypeName="ServisModel.RadniNalog">
+        <MappingFragment StoreEntitySet="RadniNalog">
+          <ScalarProperty Name="NalogID" ColumnName="NalogID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="OpisProblema" ColumnName="OpisProblema" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServisProdaja">
+      <EntityTypeMapping TypeName="ServisModel.ServisProdaja">
+        <MappingFragment StoreEntitySet="ServisProdaja">
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ImeKupca" ColumnName="ImeKupca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UgradjeniDijelovi">
+      <EntityTypeMapping TypeName="ServisModel.UgradjeniDijelovi">
+        <MappingFragment StoreEntitySet="UgradjeniDijelovi">
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="UgradjeniID" ColumnName="UgradjeniID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usluge">
+      <EntityTypeMapping TypeName="ServisModel.Usluge">
+        <MappingFragment StoreEntitySet="Usluge">
+          <ScalarProperty Name="UslugaID" ColumnName="UslugaID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vozilo">
+      <EntityTypeMapping TypeName="ServisModel.Vozilo">
+        <MappingFragment StoreEntitySet="Vozilo">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="insertIzvrseneUsluge" FunctionName="ServisModel.Store.insertIzvrseneUsluge" />
+    <FunctionImportMapping FunctionImportName="insertUsluge" FunctionName="ServisModel.Store.insertUsluge" />
+    <FunctionImportMapping FunctionImportName="insertServis" FunctionName="ServisModel.Store.insertServis" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PEPModelStoreContainer" CdmEntityContainer="PEPEntities">
+    <EntitySetMapping Name="Dijelovi">
+      <EntityTypeMapping TypeName="PEPModel.Dijelovi">
+        <MappingFragment StoreEntitySet="Dijelovi">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvrseneUsluge">
+      <EntityTypeMapping TypeName="PEPModel.IzvrseneUsluge">
+        <MappingFragment StoreEntitySet="IzvrseneUsluge">
+          <ScalarProperty Name="IzvrseneUslugeID" ColumnName="IzvrseneUslugeID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="UslugaID" ColumnName="UslugaID" />
+          <ScalarProperty Name="BrojUsluga" ColumnName="BrojUsluga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Model">
+      <EntityTypeMapping TypeName="PEPModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="VrstaModela" ColumnName="VrstaModela" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proizvodjac">
+      <EntityTypeMapping TypeName="PEPModel.Proizvodjac">
+        <MappingFragment StoreEntitySet="Proizvodjac">
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="NazivProizvodjaca" ColumnName="NazivProizvodjaca" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServisProdaja">
+      <EntityTypeMapping TypeName="PEPModel.ServisProdaja">
+        <MappingFragment StoreEntitySet="ServisProdaja">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="ImeKorisnika" ColumnName="ImeKorisnika" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UgradjeniDijelovi">
+      <EntityTypeMapping TypeName="PEPModel.UgradjeniDijelovi">
+        <MappingFragment StoreEntitySet="UgradjeniDijelovi">
+          <ScalarProperty Name="UgradjeniID" ColumnName="UgradjeniID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vozilo">
+      <EntityTypeMapping TypeName="PEPModel.Vozilo">
+        <MappingFragment StoreEntitySet="Vozilo">
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="IzvrseneUslugeServis" FunctionName="PEPModel.Store.IzvrseneUslugeServis" />
+    <FunctionImportMapping FunctionImportName="getAllServis" FunctionName="PEPModel.Store.getAllServis" />
+    <FunctionImportMapping FunctionImportName="getAllUsluge" FunctionName="PEPModel.Store.getAllUsluge" />
+    <FunctionImportMapping FunctionImportName="insertIzvrseneUsluge" FunctionName="PEPModel.Store.insertIzvrseneUsluge" />
+    <FunctionImportMapping FunctionImportName="insertServis" FunctionName="PEPModel.Store.insertServis" />
+    <FunctionImportMapping FunctionImportName="insertUsluge" FunctionName="PEPModel.Store.insertUsluge" />
+    <FunctionImportMapping FunctionImportName="selectKorisnickoIme" FunctionName="PEPModel.Store.selectKorisnickoIme" />
+    <EntitySetMapping Name="Racun">
+      <EntityTypeMapping TypeName="PEPModel.Racun">
+        <MappingFragment StoreEntitySet="Racun">
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="OpisProblema" ColumnName="OpisProblema" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_ServisSelectID" FunctionName="PEPModel.Store.esp_ServisSelectID" />
+    <FunctionImportMapping FunctionImportName="esp_select_by_Name" FunctionName="PEPModel.Store.esp_select_by_Name">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PEPModel.esp_select_by_Name_Result">
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="ImeKorisnika" ColumnName="ImeKorisnika" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="IzvrseneUsluge" ColumnName="IzvrseneUsluge" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_update_status" FunctionName="PEPModel.Store.esp_update_status" />
+    <EntitySetMapping Name="Usluge">
+      <EntityTypeMapping TypeName="PEPModel.Usluge">
+        <MappingFragment StoreEntitySet="Usluge">
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="UslugaID" ColumnName="UslugaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Narudzba">
+      <EntityTypeMapping TypeName="PEPModel.Narudzba">
+        <MappingFragment StoreEntitySet="Narudzba">
+          <ScalarProperty Name="Otkazano" ColumnName="Otkazano" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarudzbaStavke">
+      <EntityTypeMapping TypeName="PEPModel.NarudzbaStavke">
+        <MappingFragment StoreEntitySet="NarudzbaStavke">
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="NarudzbaStavkaID" ColumnName="NarudzbaStavkaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Servis_IzmjenaPassworda" FunctionName="PEPModel.Store.Servis_IzmjenaPassworda" />
+    <FunctionImportMapping FunctionImportName="Servis_Update" FunctionName="PEPModel.Store.Servis_Update" />
+    <FunctionImportMapping FunctionImportName="SelectALLModele" FunctionName="PEPModel.Store.SelectALLModele" />
+    <FunctionImportMapping FunctionImportName="SelectServis" FunctionName="PEPModel.Store.SelectServis" />
+    <FunctionImportMapping FunctionImportName="SelectIDAuto" FunctionName="PEPModel.Store.SelectIDAuto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PEPModel.SelectIDAuto_Result">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="insertVozilo" FunctionName="PEPModel.Store.insertVozilo" />
+    <FunctionImportMapping FunctionImportName="VOZILA_MODEL" FunctionName="PEPModel.Store.VOZILA_MODEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PEPModel.VOZILA_MODEL_Result">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

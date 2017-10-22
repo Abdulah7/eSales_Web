@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1789fd6eb2774f36932e89612009de30" Name="Diagram1">
+        <EntityTypeShape EntityType="PEPModel.Dijelovi" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.IzvrseneUsluge" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Korisnici" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Kupci" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Model" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.NacinPlacanja" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Narudzba" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.NarudzbaStavke" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Ocjene" Width="1.5" PointX="10.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Proizvodjac" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Racun" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.SalonServis" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.UgradjeniDijelovi" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Usluge" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PEPModel.Vozilo" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="PEPModel.FK__NarudzbaS__Dijel__027D5126" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Ugradjeni__Dijel__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__IzvrseneU__Servi__2FEF161B" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__IzvrseneU__Uslug__30E33A54" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Korisnici__Salon__3572E547" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Racun__ServisID__049AA3C2" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Ugradjeni__Servi__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Vozilo__ServisID__190BB0C3" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Narudzba__KupacI__1BE81D6E" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Ocjene__KupacID__0B7CAB7B" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Model__Proizvodj__1446FBA6" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Vozilo__ModelID__20ACD28B" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Racun__PlacanjeI__15C52FC4" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__NarudzbaS__Narud__1995C0A8" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__NarudzbaS__Vozil__1A89E4E1" ManuallyRouted="false" />
+        <AssociationConnector Association="PEPModel.FK__Ocjene__VoziloID__0C70CFB4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,169 @@
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\eProdaja_Web.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Optimization.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Providers.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\WebGrease.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\eProdajaServis.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\eProdaja_Web.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\System.Web.Optimization.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\System.Web.Providers.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\WebGrease.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Mono.Math.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\System.Web.Optimization.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\System.Web.Providers.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\Mono.Math.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll.config
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\eProdaja_Web.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\System.Web.Optimization.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\System.Web.Providers.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\WebGrease.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Mono.Math.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\System.Web.Optimization.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\System.Web.Providers.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\bin\Mono.Math.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll.config
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\eProdaja_Web.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\eProdaja_Web.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\eProdajaServis.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Optimization.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Providers.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\WebGrease.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Mono.Math.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Antlr3.Runtime.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Newtonsoft.Json.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Optimization.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\System.Web.Providers.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.Core.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\bin\Mono.Math.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja_Web\obj\Debug\eProdaja_Web.pdb
+C:\Users\Home\Desktop\eProdaja_Web\bin\eProdaja_Web.dll.config
+C:\Users\Home\Desktop\eProdaja_Web\bin\eProdaja_Web.dll
+C:\Users\Home\Desktop\eProdaja_Web\bin\eProdaja_Web.pdb
+C:\Users\Home\Desktop\eProdaja_Web\bin\eProdajaServis.dll
+C:\Users\Home\Desktop\eProdaja_Web\bin\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdaja_Web.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdaja_Web.dll
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdaja_Web.pdb

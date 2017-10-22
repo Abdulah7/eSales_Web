@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dijelovi">
+    <Key>
+      <PropertyRef Name="DijeloviID" />
+    </Key>
+    <Property Name="DijeloviID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" />
+    <Property Name="Model" Type="nvarchar" MaxLength="30" />
+    <Property Name="Zalihe" Type="nvarchar" MaxLength="30" />
+    <Property Name="Cijena" Type="float" />
+  </EntityType>
+  <EntityType Name="IzvrseneUsluge">
+    <Key>
+      <PropertyRef Name="IzvrseneUslugeID" />
+    </Key>
+    <Property Name="IzvrseneUslugeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServisID" Type="int" />
+    <Property Name="UslugaID" Type="int" />
+    <Property Name="BrojUsluga" Type="int" />
+    <Property Name="Komentar" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProizvodjacID" Type="int" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" />
+    <Property Name="VrstaModela" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Proizvodjac">
+    <Key>
+      <PropertyRef Name="ProizvodjacID" />
+    </Key>
+    <Property Name="ProizvodjacID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazivProizvodjaca" Type="nvarchar" MaxLength="30" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="RadniNalog">
+    <Key>
+      <PropertyRef Name="NalogID" />
+    </Key>
+    <Property Name="NalogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServisID" Type="int" />
+    <Property Name="OpisProblema" Type="nvarchar" MaxLength="30" />
+    <Property Name="Cijena" Type="float" />
+    <Property Name="Komentar" Type="nvarchar" MaxLength="100" />
+    <Property Name="PDV" Type="float" />
+    <Property Name="Ukupno" Type="float" />
+  </EntityType>
+  <EntityType Name="ServisProdaja">
+    <Key>
+      <PropertyRef Name="ServisID" />
+    </Key>
+    <Property Name="ServisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VoziloID" Type="int" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="ImeKupca" Type="nvarchar" MaxLength="20" />
+    <Property Name="LozinkaHash" Type="nvarchar" MaxLength="50" />
+    <Property Name="LozinkaSalt" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UgradjeniDijelovi">
+    <Key>
+      <PropertyRef Name="UgradjeniID" />
+    </Key>
+    <Property Name="UgradjeniID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServisID" Type="int" />
+    <Property Name="DijeloviID" Type="int" />
+    <Property Name="Kolicina" Type="int" />
+    <Property Name="Model" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Usluge">
+    <Key>
+      <PropertyRef Name="UslugaID" />
+    </Key>
+    <Property Name="UslugaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" />
+    <Property Name="Cijena" Type="float" />
+    <Property Name="Komentar" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Vozilo">
+    <Key>
+      <PropertyRef Name="VoziloID" />
+    </Key>
+    <Property Name="VoziloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModelID" Type="int" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" />
+    <Property Name="Godiste" Type="nvarchar" MaxLength="30" />
+    <Property Name="Boja" Type="nvarchar" MaxLength="30" />
+    <Property Name="VrstaMotora" Type="nvarchar" MaxLength="30" />
+    <Property Name="EmisijaCO2" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__IzvrseneU__Servi__239E4DCF">
+    <End Role="ServisProdaja" Type="Self.ServisProdaja" Multiplicity="0..1" />
+    <End Role="IzvrseneUsluge" Type="Self.IzvrseneUsluge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServisProdaja">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="IzvrseneUsluge">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IzvrseneU__Uslug__24927208">
+    <End Role="Usluge" Type="Self.Usluge" Multiplicity="0..1" />
+    <End Role="IzvrseneUsluge" Type="Self.IzvrseneUsluge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usluge">
+        <PropertyRef Name="UslugaID" />
+      </Principal>
+      <Dependent Role="IzvrseneUsluge">
+        <PropertyRef Name="UslugaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__Proizvodj__1920BF5C">
+    <End Role="Proizvodjac" Type="Self.Proizvodjac" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodjac">
+        <PropertyRef Name="ProizvodjacID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="ProizvodjacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RadniNalo__Servi__2D27B809">
+    <End Role="ServisProdaja" Type="Self.ServisProdaja" Multiplicity="0..1" />
+    <End Role="RadniNalog" Type="Self.RadniNalog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServisProdaja">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="RadniNalog">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServisPro__Vozil__1ED998B2">
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="0..1" />
+    <End Role="ServisProdaja" Type="Self.ServisProdaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozilo">
+        <PropertyRef Name="VoziloID" />
+      </Principal>
+      <Dependent Role="ServisProdaja">
+        <PropertyRef Name="VoziloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ugradjeni__Dijel__2A4B4B5E">
+    <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1" />
+    <End Role="UgradjeniDijelovi" Type="Self.UgradjeniDijelovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijelovi">
+        <PropertyRef Name="DijeloviID" />
+      </Principal>
+      <Dependent Role="UgradjeniDijelovi">
+        <PropertyRef Name="DijeloviID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ugradjeni__Servi__29572725">
+    <End Role="ServisProdaja" Type="Self.ServisProdaja" Multiplicity="0..1" />
+    <End Role="UgradjeniDijelovi" Type="Self.UgradjeniDijelovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServisProdaja">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="UgradjeniDijelovi">
+        <PropertyRef Name="ServisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vozilo__ModelID__1BFD2C07">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelID" />
+      </Principal>
+      <Dependent Role="Vozilo">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="insertIzvrseneUsluge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServisID" Type="int" Mode="In" />
+    <Parameter Name="UslugaID" Type="int" Mode="In" />
+    <Parameter Name="BrojUsluga" Type="int" Mode="In" />
+    <Parameter Name="Komentar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertServis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VoziloID" Type="int" Mode="In" />
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImeKupca" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertUsluge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cijena" Type="float" Mode="In" />
+    <Parameter Name="Komentar" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ServisModelStoreContainer">
+    <EntitySet Name="Dijelovi" EntityType="Self.Dijelovi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IzvrseneUsluge" EntityType="Self.IzvrseneUsluge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proizvodjac" EntityType="Self.Proizvodjac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RadniNalog" EntityType="Self.RadniNalog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServisProdaja" EntityType="Self.ServisProdaja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UgradjeniDijelovi" EntityType="Self.UgradjeniDijelovi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usluge" EntityType="Self.Usluge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vozilo" EntityType="Self.Vozilo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__IzvrseneU__Servi__239E4DCF" Association="Self.FK__IzvrseneU__Servi__239E4DCF">
+      <End Role="ServisProdaja" EntitySet="ServisProdaja" />
+      <End Role="IzvrseneUsluge" EntitySet="IzvrseneUsluge" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IzvrseneU__Uslug__24927208" Association="Self.FK__IzvrseneU__Uslug__24927208">
+      <End Role="Usluge" EntitySet="Usluge" />
+      <End Role="IzvrseneUsluge" EntitySet="IzvrseneUsluge" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__Proizvodj__1920BF5C" Association="Self.FK__Model__Proizvodj__1920BF5C">
+      <End Role="Proizvodjac" EntitySet="Proizvodjac" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RadniNalo__Servi__2D27B809" Association="Self.FK__RadniNalo__Servi__2D27B809">
+      <End Role="ServisProdaja" EntitySet="ServisProdaja" />
+      <End Role="RadniNalog" EntitySet="RadniNalog" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServisPro__Vozil__1ED998B2" Association="Self.FK__ServisPro__Vozil__1ED998B2">
+      <End Role="Vozilo" EntitySet="Vozilo" />
+      <End Role="ServisProdaja" EntitySet="ServisProdaja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ugradjeni__Dijel__2A4B4B5E" Association="Self.FK__Ugradjeni__Dijel__2A4B4B5E">
+      <End Role="Dijelovi" EntitySet="Dijelovi" />
+      <End Role="UgradjeniDijelovi" EntitySet="UgradjeniDijelovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ugradjeni__Servi__29572725" Association="Self.FK__Ugradjeni__Servi__29572725">
+      <End Role="ServisProdaja" EntitySet="ServisProdaja" />
+      <End Role="UgradjeniDijelovi" EntitySet="UgradjeniDijelovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vozilo__ModelID__1BFD2C07" Association="Self.FK__Vozilo__ModelID__1BFD2C07">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="Vozilo" EntitySet="Vozilo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

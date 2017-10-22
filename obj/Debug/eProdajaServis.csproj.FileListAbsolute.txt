@@ -1,0 +1,55 @@
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Desktop\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782(6)\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll.config
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\bin\Debug\EntityFramework.xml
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\PEP-SeminarskiRad-2782\PEP-SeminarskiRad-2782\Aplikacija-2782\eProdaja\eProdajaServis\obj\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\eProdaja_Web\obj\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja_Web\bin\Debug\eProdajaServis.dll.config
+C:\Users\Home\Desktop\eProdaja_Web\bin\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\eProdaja_Web\bin\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja_Web\bin\Debug\EntityFramework.dll
+C:\Users\Home\Desktop\eProdaja_Web\bin\Debug\EntityFramework.xml
